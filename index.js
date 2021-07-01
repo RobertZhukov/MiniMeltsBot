@@ -1,5 +1,4 @@
 const TelegramBot = require('node-telegram-bot-api');
-// const aws = require('aws-sdk');
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
   res.end('')
 })
@@ -42,9 +41,6 @@ const dataBase = {
   users: [],
 };
 
-
-// let s3 = new aws.S3({ token: process.env.TOKEN_MINIMELTS_BOT });
-// console.log('s3', s3)
 const bot = new TelegramBot(process.env.TOKEN_MINIMELTS_BOT, { polling: true });
 
 const questions = {
