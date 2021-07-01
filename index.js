@@ -1,4 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
+const { TOKEN } = require('./src/token');
 require('http').createServer().listen(process.env.PORT || 5000).on('request', function(req, res){
   res.end('')
 })
@@ -41,7 +42,6 @@ const dataBase = {
   users: [],
 };
 
-const TOKEN = '1824648012:AAGYgF1x533dFkeBVLSb12on3oE6geXNvtE';
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 const questions = {
