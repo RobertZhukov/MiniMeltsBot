@@ -98,8 +98,8 @@ const sendIceCreamType = async (msg, bot, chatId) => {
 }
 
 const sendMakeProcess = async (msg, bot, chatId) => {
-  await bot.sendMessage(chatId, questions.makeProcess, { parse_mode: 'Markdown' });
   await bot.sendPhoto(chatId, fs.readFileSync('./src/img/makeProcess.jpg'))
+  await bot.sendMessage(chatId, questions.makeProcess, { parse_mode: 'Markdown' });
   await repeatInfo(msg, bot, chatId)
   return
 }
